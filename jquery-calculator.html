@@ -80,8 +80,31 @@
     $(document).ready(function () {
 
       // Your code here...
+      var firstNumber = "";
+      var operatorClicked = false;
 
+      $(".number").on("click", function (event) {
+        console.log(event.currentTarget.value);
+        if (!operatorClicked) {
+          firstNumber += event.currentTarget.value;
+          console.log(firstNumber);
+        } else {
 
+        }
+      })
+
+      $(".operator").on("click", function (event) {
+        console.log(event.currentTarget.value);
+        operatorClicked = true;
+      })
+
+      $(".equal").on("click", function (event) {
+
+      })
+
+      $(".clear").on("click", function (event) {
+
+      })
     });
 
   </script>
