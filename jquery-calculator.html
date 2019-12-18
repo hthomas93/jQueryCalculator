@@ -95,8 +95,23 @@
 
       $(".operator").on("click", function (event) {
         console.log(event.currentTarget.value);
+        var operator = event.currentTarget.value
         operatorClicked = true;
-      })
+        function operateNumbers() {
+          if (operator === "plus") {
+            console.log(firstNumber + secondNumber);
+          } else if (operator === "minus") {
+            console.log(firstNumber - secondNumber);
+          } else if (operator === "times") {
+            console.log(firstNumber * secondNumber);
+          } else if (operator === "divide") {
+            console.log(firstNumber / secondNumber);
+          } else if (operator === "power") {
+            console.log(Math.pow(firstNumber, secondNumber));
+          }
+        }
+        operateNumbers();
+      });
 
       $(".equal").on("click", function (event) {
 
@@ -105,6 +120,11 @@
       $(".clear").on("click", function (event) {
 
       })
+
+
+      // check which operator was clicked
+      // save the operator for use in a conditional statement
+      //
     });
 
   </script>
